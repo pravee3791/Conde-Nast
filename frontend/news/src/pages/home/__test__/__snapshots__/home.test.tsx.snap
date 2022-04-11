@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the Home Component Home component shall match the snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+   
+  <BrowserRouter>
+    <Router
+      location={
+        Object {
+          "hash": "",
+          "key": "default",
+          "pathname": "/",
+          "search": "",
+          "state": null,
+        }
+      }
+      navigationType="POP"
+      navigator={
+        Object {
+          "action": "POP",
+          "back": [Function],
+          "block": [Function],
+          "createHref": [Function],
+          "forward": [Function],
+          "go": [Function],
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "default",
+            "pathname": "/",
+            "search": "",
+            "state": null,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Home>
+        <Header>
+          <div
+            className="header"
+          >
+            <h4 />
+          </div>
+        </Header>
+        <Search>
+          <div
+            className="wrapper"
+          >
+            <div
+              className="search-container"
+            >
+              <input
+                className="input"
+                onChange={[Function]}
+                onKeyPress={[Function]}
+                placeholder="What are you looking for?"
+                type="text"
+                value=""
+              />
+              <input
+                className="close-btn"
+                onClick={[Function]}
+                type="button"
+                value="search"
+              />
+            </div>
+          </div>
+        </Search>
+        <div
+          className="home"
+        >
+          <Loader>
+            <div
+              className="container"
+            >
+              <div
+                className="card is-loading"
+                key="0"
+              >
+                <div
+                  className="image"
+                />
+                <div
+                  className="content"
+                >
+                  <h2 />
+                  <p />
+                </div>
+              </div>
+              <div
+                className="card is-loading"
+                key="1"
+              >
+                <div
+                  className="image"
+                />
+                <div
+                  className="content"
+                >
+                  <h2 />
+                  <p />
+                </div>
+              </div>
+              <div
+                className="card is-loading"
+                key="2"
+              >
+                <div
+                  className="image"
+                />
+                <div
+                  className="content"
+                >
+                  <h2 />
+                  <p />
+                </div>
+              </div>
+              <div
+                className="card is-loading"
+                key="3"
+              >
+                <div
+                  className="image"
+                />
+                <div
+                  className="content"
+                >
+                  <h2 />
+                  <p />
+                </div>
+              </div>
+              <div
+                className="card is-loading"
+                key="4"
+              >
+                <div
+                  className="image"
+                />
+                <div
+                  className="content"
+                >
+                  <h2 />
+                  <p />
+                </div>
+              </div>
+              <div
+                className="card is-loading"
+                key="5"
+              >
+                <div
+                  className="image"
+                />
+                <div
+                  className="content"
+                >
+                  <h2 />
+                  <p />
+                </div>
+              </div>
+              <div
+                className="card is-loading"
+                key="6"
+              >
+                <div
+                  className="image"
+                />
+                <div
+                  className="content"
+                >
+                  <h2 />
+                  <p />
+                </div>
+              </div>
+              <div
+                className="card is-loading"
+                key="7"
+              >
+                <div
+                  className="image"
+                />
+                <div
+                  className="content"
+                >
+                  <h2 />
+                  <p />
+                </div>
+              </div>
+              <div
+                className="card is-loading"
+                key="8"
+              >
+                <div
+                  className="image"
+                />
+                <div
+                  className="content"
+                >
+                  <h2 />
+                  <p />
+                </div>
+              </div>
+              <div
+                className="card is-loading"
+                key="9"
+              >
+                <div
+                  className="image"
+                />
+                <div
+                  className="content"
+                >
+                  <h2 />
+                  <p />
+                </div>
+              </div>
+            </div>
+          </Loader>
+          <div
+            className="container"
+          />
+        </div>
+      </Home>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

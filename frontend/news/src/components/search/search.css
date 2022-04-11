@@ -6,19 +6,21 @@
 }
 
 .search-container{
-  position: relative;
-  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .input{
   width: 400px;
-  border: 3px solid #fff;
+  border: 3px solid #4F5565;
   background: transparent;
   padding: 15px 30px;
   border-radius: 50px;
   outline: none;
   font-size: 18px;
-  color: #fff;
+  color: #4F5565;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -34,8 +36,7 @@
 }
 
 .close-btn{
-  position: absolute;
-  top: 21px;
+
   right: 50px;
   cursor: pointer;
   color: #fc913a;

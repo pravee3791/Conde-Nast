@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the  Component Details component shall match the snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+   
+  <BrowserRouter>
+    <Router
+      location={
+        Object {
+          "hash": "",
+          "key": "default",
+          "pathname": "/",
+          "search": "",
+          "state": null,
+        }
+      }
+      navigationType="POP"
+      navigator={
+        Object {
+          "action": "POP",
+          "back": [Function],
+          "block": [Function],
+          "createHref": [Function],
+          "forward": [Function],
+          "go": [Function],
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "default",
+            "pathname": "/",
+            "search": "",
+            "state": null,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <NewsDetails>
+        <Header>
+          <div
+            className="header"
+          >
+            <h4 />
+          </div>
+        </Header>
+        <div
+          className="newspage"
+        >
+          <h1
+            className="title centerpage"
+          />
+          <img
+            alt="sample88"
+            src=""
+          />
+          <section>
+            <p />
+          </section>
+          <div>
+            <a
+              href=""
+              target="_blank"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </NewsDetails>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

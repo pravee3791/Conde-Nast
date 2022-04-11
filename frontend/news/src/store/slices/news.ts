@@ -3,7 +3,6 @@ import { INews } from "../../models/news";
 import { Thunk } from '../../store/types';
 import NewsServiceI from "../../services/api";
 import { HEADLINEENDPOINT, newsKey } from '../../constants/constant';
-import { stat } from 'fs';
 
 export interface NewsS {
     Newss: Array<INews>,
@@ -11,6 +10,7 @@ export interface NewsS {
     isNewssLoaded: boolean,
     isNewssLoading: boolean,
     isError: boolean,
+    error: string,
     currenNews: INews,
 }
 const initialState: NewsS = {
@@ -19,6 +19,7 @@ const initialState: NewsS = {
     isNewssLoaded: false,
     isNewssLoading:false,
     isError: false,
+    error: '',
     currenNews: {
         source: {
             id: '',
@@ -50,19 +51,25 @@ export const Newss = createSlice({
             state.isNewssLoading = false;
             state.isError = false;
         },
-        failure(state) {
+        failure(state, action: PayloadAction<string>) {
             state.isNewssLoading = false;
             state.isNewssLoaded = false;
             state.isError = true;
+            state.error = action.payload; 
         },
         currentNews(state, action: PayloadAction<INews>) {
             state.currenNews = action.payload;
-        }
+        }, 
+        clearNews(state) {
+            state.Newss = [];
+            state.NewsCount = 0;
+        }, 
+    
 
     },
 })
 
-export const { fetchingNewss,loadNewss, failure, currentNews } = Newss.actions
+export const { fetchingNewss,loadNewss, failure, currentNews , clearNews} = Newss.actions
 
 export default Newss.reducer
 
@@ -72,19 +79,20 @@ export const getNews = (): Thunk => {
         try {
             const { data } = await NewsServiceI.getHeadline(`${HEADLINEENDPOINT}?country=in&apiKey=${newsKey}`);
             dispatch(loadNewss(data.articles))
-        } catch (e) {
-            dispatch(failure())
+        } catch (e:any) {
+            dispatch(failure(e.message))
         }
     }
 }
 export const searchNews = (search:string): Thunk => {
     return async (dispatch) => {
+        dispatch(clearNews())
         dispatch(fetchingNewss());
         try {
             const { data } = await NewsServiceI.getHeadline(`${HEADLINEENDPOINT}?q=${search}&apiKey=${newsKey}`);
             dispatch(loadNewss(data.articles))
-        } catch (e) {
-            dispatch(failure())
+        } catch (e:any) {
+            dispatch(failure(e.message))
         }
     }
 }

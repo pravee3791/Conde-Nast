@@ -8,7 +8,7 @@ function Loader() {
                 {
                     loaderArray.map((item, index) => {
                         return (
-                            <div className="card is-loading">
+                            <div key={index} className="card is-loading">
                                 <div className="image">
 
                                 </div>
